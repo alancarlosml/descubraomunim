@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Descubra o Munim</title>
+<meta name="description" content="Projeto do IFMA Campus Rosário para divulgar a região do Munim — 7 municípios do Maranhão com mapa interativo, história e cultura local.">
+<meta name="theme-color" content="#0d1b0e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Descubra o Munim">
+<meta property="og:description" content="Conheça os 7 municípios da região do Munim. Projeto em desenvolvimento por alunos do IFMA Campus Rosário.">
+<meta property="og:image" content="https://descubraomunim.com.br/logo.png">
+<meta property="og:url" content="https://descubraomunim.com.br">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SPLASH -->
+<div id="splash">
+  <img id="logo-img" src="logo.png" alt="Logo Descubra o Munim">
+  <h1 id="splash-title">Descubra <span>o Munim</span></h1>
+  <button id="splash-btn" onclick="entrar()">Explorar a região →</button>
+  <p id="ifma-badge">Projeto em construção por alunos do IFMA Campus Rosário · 2026</p>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <div id="topbar">
+    <img src="logo.png" alt="Logo Descubra o Munim">
+    <div id="topbar-title">Descubra <span>o Munim</span></div>
+    <div id="topbar-badge">IFMA Campus<br> Rosário</div>
+  </div>
+  <div id="dev-banner">Versão de lançamento · Páginas por cidade em breve</div>
+  <div id="main">
+    <div id="map"></div>
+    <div id="sidebar">
+      <div id="sidebar-header">
+        <h2>7 Municípios</h2>
+        <p>Clique para explorar cada cidade</p>
+      </div>
+      <div id="city-list"></div>
+      <div id="detail-panel">
+        <div id="detail-color-bar"></div>
+        <div id="detail-nome"></div>
+        <div id="detail-pop"></div>
+        <div id="detail-desc"></div>
+      </div>
+      <div id="sidebar-footer">descubraomunim.com.br</div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
