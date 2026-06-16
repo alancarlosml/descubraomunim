@@ -7,4 +7,4 @@ services:
       - ./public:/usr/share/nginx/html:ro
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     ports:
-      - "127.0.0.1:8090:80"
+      - "8090:80"
