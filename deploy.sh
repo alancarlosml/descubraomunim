@@ -8,6 +8,7 @@ git pull origin main
 
 echo ">> Subindo container..."
 docker compose up -d
+docker compose restart descubraomunim
 
 echo ">> Pronto. Site em http://127.0.0.1:8090"
 docker compose ps
