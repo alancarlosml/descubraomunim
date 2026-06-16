@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Descubra o Munim</title>
 <meta name="description" content="Projeto do IFMA Campus Rosário para divulgar a região do Munim — 8 municípios do Maranhão com mapa interativo, história e cultura local.">
 <meta name="theme-color" content="#0d1b0e">
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
 
@@ -26,6 +26,9 @@
   <img id="logo-img" src="logo.png" alt="Logo Descubra o Munim">
   <h1 id="splash-title">Descubra <span>o Munim</span></h1>
   <button id="splash-btn" onclick="entrar()">Explorar a região →</button>
+  <a id="splash-qrcode" href="https://descubraomunim.com.br" target="_blank" rel="noopener" aria-label="QR code do site descubraomunim.com.br">
+    <img src="qrcode.jpg" alt="QR code descubraomunim.com.br">
+  </a>
   <p id="ifma-badge">Projeto em construção por alunos do IFMA Campus Rosário · 2026</p>
 </div>
 

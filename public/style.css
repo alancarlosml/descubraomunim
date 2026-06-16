@@ -66,13 +66,25 @@ html,body{height:100%;overflow:hidden;font-family:'Inter',sans-serif;background:
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 
 #ifma-badge{
-  position:absolute;bottom:20px;
+  position:absolute;bottom:calc(20px + env(safe-area-inset-bottom, 0px));left:0;right:0;
+  padding:0 16px;text-align:center;
   font-size:.75rem;color:rgba(255,255,255,.3);letter-spacing:.08em;text-transform:uppercase;
   animation: fadeUp 1s 1s ease both;
 }
 
+#splash-qrcode{
+  margin-top:28px;
+  animation: fadeUp 1s .9s ease both;
+}
+#splash-qrcode img{
+  display:block;
+  width:clamp(120px,32vw,160px);
+  height:clamp(120px,32vw,160px);
+  border-radius:8px;
+}
+
 /* MAPA */
-#app{height:100vh;display:flex;flex-direction:column;}
+#app{height:100vh;height:100dvh;display:flex;flex-direction:column;}
 
 #topbar{
   background:#0d1b0e;
@@ -178,7 +190,10 @@ html,body{height:100%;overflow:hidden;font-family:'Inter',sans-serif;background:
     border-top:1px solid rgba(212,160,23,.2);
     flex-direction:column;
     max-height:38vh;
+    max-height:38dvh;
     overflow:hidden;
+    padding-bottom:max(20px, env(safe-area-inset-bottom, 0px));
+    flex-shrink:0;
   }
   #sidebar-header{padding:8px 14px;display:flex;align-items:center;justify-content:space-between;}
   #sidebar-header p{display:none;}
@@ -211,6 +226,11 @@ html,body{height:100%;overflow:hidden;font-family:'Inter',sans-serif;background:
   }
   #dev-banner{font-size:.6rem;padding:5px 10px;}
   #sidebar-footer{display:none;}
+
+  #splash{padding-bottom:calc(56px + env(safe-area-inset-bottom, 0px));}
+  #splash-btn{margin-top:32px;}
+  #splash-qrcode{margin-top:24px;}
+  #splash-qrcode img{width:clamp(140px,38vw,180px);height:clamp(140px,38vw,180px);}
 }
 
 /* leaflet dark overrides */
